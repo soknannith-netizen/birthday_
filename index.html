@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎂✨</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@600;700;900&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <!-- Background Floating Elements -->
+    <div class="bg-elements" id="bgElements"></div>
+
+    <!-- បដាខ្សែបូត្រីកោណព្យួរផ្នែកខាងលើ (Bunting Garland) -->
+    <div class="bunting-garland">
+        <div class="string"></div>
+        <div class="flags-container">
+            <span class="flag"></span><span class="flag"></span><span class="flag"></span><span class="flag"></span>
+            <span class="flag"></span><span class="flag"></span><span class="flag"></span><span class="flag"></span>
+            <span class="flag"></span><span class="flag"></span><span class="flag"></span><span class="flag"></span>
+            <span class="flag"></span><span class="flag"></span><span class="flag"></span>
+        </div>
+    </div>
+
+    <div class="main-layout">
+        
+        <!-- ផ្នែកខាងឆ្វេង (Title, Wish Input & Button) -->
+        <div class="left-section">
+            <div class="title-container">
+                <div class="party-hat"></div>
+                <div class="custom-title-wrapper">
+                    <h1 class="text-happy">Happy</h1>
+                    <h1 class="text-birthday">Birthday</h1>
+                </div>
+                <div class="date-badge">
+                    <span class="star">★</span> <span id="displayName">15 October 2026</span> <span class="star">★</span>
+                </div>
+                
+                <button class="click-btn" id="openCardBtn">Enjoy Your Birthday🡲</button>
+            </div>
+        </div>
+
+        <!-- ផ្នែកខាងស្តាំ (រូបភាព Panda + ປຸ່ມ Dear You) -->
+        <div class="right-section">
+            <div class="balloon b1"></div>
+            <div class="balloon b2"></div>
+
+            <div class="panda-wrapper" id="pandaContainer">
+                <div class="panda-circle-frame">
+                    <img src="1.jpg" alt="Cute Panda" class="panda-img">
+                </div>
+                <div class="dear-you-tag">HAPPY BIRTHDAY TO ME 💖</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- មុខយิ້ມมุมล่าง -->
+    <div class="smiley">◡̈</div>
+
+    <!-- 3D Popup Card Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <button class="close-btn" id="closeCardBtn">✕</button>
+        
+        <div class="card-scene">
+            <div class="card" id="greetingCard">
+                <div class="card-face card-front">
+                    <div class="front-content">
+                        <div class="mini-panda">🐼</div>
+                        <p class="to-you-text">To You ❤️</p>
+                        <h2>HAPPY BIRTHDAY</h2>
+                        <div class="cake-container" id="interactiveCake" title="ចុចដើម្បីផ្លុំទៀន!">
+                            🎂 <span class="candle" id="candleFlame">🕯️</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-face card-inside">
+                    <div class="inside-left">
+                        <img src="3.jpg" alt="Cute Panda" class="panda-img">
+                        <p class="to-you-text">This Caption For Me Write To You ❤️</p>
+                        <h2>HAPPY BIRTHDAY</h2>
+                        <div class="cake-icon">🎉✨</div>
+                    </div>
+                    <div class="inside-right">
+                        <h3>✨This Caption For Po Pozz Write To Sister!</h3>
+                        <p id="typedMessage"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
